@@ -38,7 +38,7 @@ import scala.concurrent.duration.Duration;
  * @author puneethvreddy
  *
  */
-public class ActorInception extends UntypedActor{
+public class IotSupervisor extends UntypedActor{
 
 	private final LoggingAdapter log = Logging.getLogger(getContext().system(), this);
 
@@ -60,12 +60,12 @@ public class ActorInception extends UntypedActor{
 	private List<String> userList = new ArrayList<>();
 	private List<String> groupList = new ArrayList<>();
 
-	public ActorInception(Config config) {
+	public IotSupervisor(Config config) {
 		this.config = config;
 	}
 
 	public static Props props(Config config){
-		return Props.create(ActorInception.class, config);
+		return Props.create(IotSupervisor.class, config);
 	}
 
 	@Override

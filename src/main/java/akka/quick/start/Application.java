@@ -14,7 +14,7 @@ public class Application
 	{
 		Config config = ConfigFactory.load();
 		
-		SYSTEM.actorOf(ActorInception.props(config), "inception");
+		SYSTEM.actorOf(IotSupervisor.props(config), "inception");
 	}
 
 }
